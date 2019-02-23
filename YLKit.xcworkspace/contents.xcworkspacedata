@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:YLKit/YLKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:YLKitSwift/YLKitSwift.xcodeproj">
+   </FileRef>
+</Workspace>
