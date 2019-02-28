@@ -1,0 +1,44 @@
+//
+//  ManageSwift.swift
+//  YLKitSwift
+//
+//  Created by Yeonluu on 2017/5/22.
+//  Copyright © 2017年 Yeonluu. All rights reserved.
+//
+
+import UIKit
+
+let SYSTEM_VERSION = UIDevice.current.systemVersion
+let SCREEN_BOUNDS = UIScreen.main.bounds
+let SCREEN_WIDTH = UIScreen.main.bounds.size.width
+let SCREEN_HEIGHT = UIScreen.main.bounds.size.height
+let SCREEN_WIDTH_HALF = SCREEN_WIDTH/2.0
+let SCREEN_WIDTH_QUARTER = SCREEN_WIDTH/4.0
+
+let SCREEN_IS_NARROW = SCREEN_WIDTH == 320
+let SCREEN_WIDTH_SCALE = SCREEN_WIDTH/375
+let SCREEN_HEIGHT_SCALE  = SCREEN_HEIGHT/667
+
+let SCREEN_STATUS_HEIGHT:CGFloat = DEVICE_IPHONEX ? 44 : 20     // 状态栏高度
+let SCREEN_NAV_HEIGHT = (44 + SCREEN_STATUS_HEIGHT)       // 导航栏高度
+let SCREEN_BOTTOM_HEIGHT:CGFloat = (DEVICE_IPHONEX ? 34 : 0)      // 底部高度
+let SCREEN_TAB_HEIGHT = (49 + SCREEN_BOTTOM_HEIGHT)       // 控制栏高度
+let SCREEN_VIEW_HEIGHT = (SCREEN_HEIGHT-SCREEN_NAV_HEIGHT) // 内容视图高度
+let SCREEN_SAFE_HEIGHT = (SCREEN_VIEW_HEIGHT-SCREEN_BOTTOM_HEIGHT) // 安全视图高度
+
+let OPERATE_BAR_HEIGHT:CGFloat = 45 // 操作栏高度
+let OPERATE_BOTTOM_HEIGHT:CGFloat = (45 + SCREEN_BOTTOM_HEIGHT) // 操作栏底部高度
+
+let DEVICE_IOS10 = (SYSTEM_VERSION >= "10.0.0")
+let DEVICE_IOS11 = (SYSTEM_VERSION >= "11.0.0")
+
+let DEVICE_IPHONE4 = SCREEN_HEIGHT == 480
+let DEVICE_IPHONE5 = SCREEN_HEIGHT == 568
+let DEVICE_IPHONE6 = SCREEN_HEIGHT == 667
+let DEVICE_IPHONE6P = SCREEN_HEIGHT == 736
+let DEVICE_IPHONEX = SCREEN_HEIGHT >= 812
+
+let ONE_PHYSICAL_PX = 1 / UIScreen.main.scale
+
+let SEGMENT_HEIGHT:CGFloat  = 40
+let SEGMENT_HEIGHT_SECONDARY:CGFloat  = 46

@@ -89,17 +89,6 @@
     return @[@"周日", @"周一", @"周二", @"周三", @"周四", @"周五", @"周六"][[dateComponents weekday]-1];
 }
 
-- (NSString *)chartDayString
-{
-    NSArray *days = @[@"前天", @"昨天", @"今天"];
-    for (int i = -2; i <= 0; i++) {
-        if ([self isSameDayAsOtherDate:[NSDate dateWithTimeIntervalSinceNow:60*60*24*i]]) {
-            return days[i+2];
-        }
-    }
-    return [self dateString];
-}
-
 #pragma mark - Helper
 
 - (BOOL)isSameDayAsOtherDate:(NSDate *)date
