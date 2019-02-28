@@ -4,7 +4,6 @@
 --
 
 ### Todo
-1. add more components
-- add swift kit
-- add tools kit and demo
+- Add more components
+- Add tools kit and demo
 
