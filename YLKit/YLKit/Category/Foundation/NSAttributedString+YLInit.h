@@ -1,5 +1,5 @@
 //
-//  NSAttributedString+YLExtension.h
+//  NSAttributedString+YLInit.h
 //  YLKit
 //
 //  Created by Yeonluu on 16/1/5.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NSAttributedString (YLExtension)
+@interface NSAttributedString (YLInit)
 
 /**
  *  范围富文本

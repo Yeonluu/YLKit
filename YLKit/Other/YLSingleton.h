@@ -3,28 +3,22 @@
 
 // .m文件
 #define SingletonM(name) \
-static id _instace; \
-\
-+ (id)allocWithZone:(struct _NSZone *)zone \
++ (instancetype)shared##name \
 { \
+    static id _instace = nil; \
     static dispatch_once_t onceToken; \
     dispatch_once(&onceToken, ^{ \
-        _instace = [super allocWithZone:zone]; \
+        _instace = [[super allocWithZone:NULL] init]; \
     }); \
     return _instace; \
 } \
 \
-+ (instancetype)shared##name \
++ (id)allocWithZone:(struct _NSZone *)zone \
 { \
-    static dispatch_once_t onceToken; \
-    dispatch_once(&onceToken, ^{ \
-        _instace = [[self alloc] init]; \
-    }); \
-    return _instace; \
+    return [self shared##name]; \
 } \
 \
 - (id)copyWithZone:(NSZone *)zone \
 { \
-    return _instace; \
-}
-
+    return self; \
+} \

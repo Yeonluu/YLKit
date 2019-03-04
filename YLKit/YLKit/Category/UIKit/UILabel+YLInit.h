@@ -1,5 +1,5 @@
 //
-//  UILabel+YLExtension.h
+//  UILabel+YLInit.h
 //  YLKit
 //
 //  Created by Yeonluu on 15/8/17.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UILabel (YLExtension)
+@interface UILabel (YLInit)
 
 /**
  构造方法 快速创建常规体标签

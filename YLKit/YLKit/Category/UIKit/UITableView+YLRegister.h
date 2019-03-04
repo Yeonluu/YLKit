@@ -1,5 +1,5 @@
 //
-//  UITableView+YLExtension.h
+//  UITableView+YLRegister.h
 //  YLKit
 //
 //  Created by Yeonluu on 2017/5/26.
@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UITableView (YLExtension)
+@interface UITableView (YLRegister)
 
-//- (void)setupTableView;
 
 /**
  快速创建默认tableView
@@ -68,7 +67,7 @@
 @end
 
 
-@interface UICollectionView (YLExtension)
+@interface UICollectionView (YLInit)
 
 /**
  快速创建默认collectionView

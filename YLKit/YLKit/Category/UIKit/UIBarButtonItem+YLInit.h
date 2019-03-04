@@ -1,5 +1,5 @@
 //
-//  UIBarButtonItem+YLExtension.h
+//  UIBarButtonItem+YLInit.h
 //  YLKit
 //
 //  Created by Yeonluu on 2017/10/10.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIBarButtonItem (YLExtension)
+@interface UIBarButtonItem (YLInit)
 
 /**
  创建左侧图片按钮项

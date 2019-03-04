@@ -1,14 +1,14 @@
 //
-//  UITextField+YLExtension.m
+//  UITextField+YLCheck.m
 //  YLKit
 //
 //  Created by Yeonluu on 15/12/10.
 //  Copyright © 2015年 Yeonluu. All rights reserved.
 //
 
-#import "UITextField+YLExtension.h"
+#import "UITextField+YLCheck.h"
 
-@implementation UITextField (YLExtension)
+@implementation UITextField (YLCheck)
 
 
 + (instancetype)textFieldWithFontSize:(CGFloat)fontSize textColor:(UIColor *)textColor placeholder:(NSString *)placeholder keyboardType:(UIKeyboardType)keyboardType returnKeyType:(UIReturnKeyType)returnKeyType delegate:(id<UITextFieldDelegate>)delegate target:(id)target action:(SEL)action

@@ -1,5 +1,5 @@
 //
-//  UIButton+YLExtension.h
+//  UIButton+YLInit.h
 //
 //  Created by Yeonluu on 15/1/21.
 //  Copyright © 2015年 Yeonluu. All rights reserved.
@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIButton (YLExtension)
+@interface UIButton (YLInit)
 
 /**
  创建普通文字按钮

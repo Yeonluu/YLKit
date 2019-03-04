@@ -1,5 +1,5 @@
 //
-//  UIResponder+YLUnit.h
+//  UIResponder+YLFirstResponder.h
 //  YLKit
 //
 //  Created by Yeonluu on 15/12/8.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIResponder (YLUnit)
+@interface UIResponder (YLFirstResponder)
 
 /**
  *  获取当前的视图控制器

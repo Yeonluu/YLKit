@@ -69,11 +69,6 @@
 - (NSString *)weekdayString;
 
 /**
- *  前天~今天/月-日
- */
-- (NSString *)chartDayString;
-
-/**
  *  是否为同一天
  */
 - (BOOL)isSameDayAsOtherDate:(NSDate *)date;

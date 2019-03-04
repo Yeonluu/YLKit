@@ -26,20 +26,19 @@
 		BB91855122203B8A00B484C3 /* YLHorizontalLayoutButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BB91854B22203B8A00B484C3 /* YLHorizontalLayoutButton.m */; };
 		BB9185AD2220420500B484C3 /* UILabel+YLAttributedText.m in Sources */ = {isa = PBXBuildFile; fileRef = BB91857D2220420000B484C3 /* UILabel+YLAttributedText.m */; };
 		BB9185B12220420500B484C3 /* UIView+YLFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9185872220420100B484C3 /* UIView+YLFrame.m */; };
-		BB9185B22220420500B484C3 /* UIBarButtonItem+YLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9185892220420100B484C3 /* UIBarButtonItem+YLExtension.m */; };
+		BB9185B22220420500B484C3 /* UIBarButtonItem+YLInit.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9185892220420100B484C3 /* UIBarButtonItem+YLInit.m */; };
 		BB9185B32220420500B484C3 /* NSArray+YLSafeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BB91858B2220420100B484C3 /* NSArray+YLSafeObject.m */; };
-		BB9185B52220420500B484C3 /* UIButton+YLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9185922220420100B484C3 /* UIButton+YLExtension.m */; };
+		BB9185B52220420500B484C3 /* UIButton+YLInit.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9185922220420100B484C3 /* UIButton+YLInit.m */; };
 		BB9185B62220420500B484C3 /* UILabel+YLTextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9185932220420200B484C3 /* UILabel+YLTextSize.m */; };
 		BB9185B72220420500B484C3 /* UIImage+YLColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9185952220420200B484C3 /* UIImage+YLColor.m */; };
-		BB9185BC2220420500B484C3 /* UITableView+YLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9185A12220420300B484C3 /* UITableView+YLExtension.m */; };
-		BB9185BE2220420500B484C3 /* UILabel+YLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9185A32220420400B484C3 /* UILabel+YLExtension.m */; };
-		BB9185C02220420500B484C3 /* UIResponder+YLUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9185A72220420400B484C3 /* UIResponder+YLUnit.m */; };
-		BB9185C12220420500B484C3 /* UIImageView+YLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9185A82220420400B484C3 /* UIImageView+YLExtension.m */; };
-		BB9185C42220420500B484C3 /* UITextField+YLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9185AB2220420500B484C3 /* UITextField+YLExtension.m */; };
+		BB9185BC2220420500B484C3 /* UITableView+YLRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9185A12220420300B484C3 /* UITableView+YLRegister.m */; };
+		BB9185BE2220420500B484C3 /* UILabel+YLInit.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9185A32220420400B484C3 /* UILabel+YLInit.m */; };
+		BB9185C02220420500B484C3 /* UIResponder+YLFirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9185A72220420400B484C3 /* UIResponder+YLFirstResponder.m */; };
+		BB9185C42220420500B484C3 /* UITextField+YLCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9185AB2220420500B484C3 /* UITextField+YLCheck.m */; };
 		BB9185DF2220431900B484C3 /* NSObject+YLSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9185DE2220431900B484C3 /* NSObject+YLSwizzling.m */; };
 		BB9186082220478000B484C3 /* NSString+YLFirstLetters.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9185EF2220477E00B484C3 /* NSString+YLFirstLetters.m */; };
 		BB91860A2220478000B484C3 /* NSObject+YLJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9185F22220477F00B484C3 /* NSObject+YLJSON.m */; };
-		BB91860B2220478000B484C3 /* NSAttributedString+YLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9185F32220477F00B484C3 /* NSAttributedString+YLExtension.m */; };
+		BB91860B2220478000B484C3 /* NSAttributedString+YLInit..m in Sources */ = {isa = PBXBuildFile; fileRef = BB9185F32220477F00B484C3 /* NSAttributedString+YLInit..m */; };
 		BB91860D2220478000B484C3 /* NSString+YLEmoji.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9185F72220477F00B484C3 /* NSString+YLEmoji.m */; };
 		BB9186102220478000B484C3 /* NSString+YLRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9185FC2220477F00B484C3 /* NSString+YLRegex.m */; };
 		BB9186122220478000B484C3 /* NSString+YLCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9186032220477F00B484C3 /* NSString+YLCheck.m */; };
@@ -87,35 +86,33 @@
 		BB91854E22203B8A00B484C3 /* YLVerticalLayoutButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLVerticalLayoutButton.h; sourceTree = "<group>"; };
 		BB91857D2220420000B484C3 /* UILabel+YLAttributedText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+YLAttributedText.m"; sourceTree = "<group>"; };
 		BB91857F2220420000B484C3 /* UIView+YLFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YLFrame.h"; sourceTree = "<group>"; };
-		BB9185812220420000B484C3 /* UIImageView+YLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+YLExtension.h"; sourceTree = "<group>"; };
-		BB9185842220420000B484C3 /* UITextField+YLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+YLExtension.h"; sourceTree = "<group>"; };
-		BB9185862220420000B484C3 /* UILabel+YLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+YLExtension.h"; sourceTree = "<group>"; };
+		BB9185842220420000B484C3 /* UITextField+YLCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+YLCheck.h"; sourceTree = "<group>"; };
+		BB9185862220420000B484C3 /* UILabel+YLInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+YLInit.h"; sourceTree = "<group>"; };
 		BB9185872220420100B484C3 /* UIView+YLFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YLFrame.m"; sourceTree = "<group>"; };
-		BB9185892220420100B484C3 /* UIBarButtonItem+YLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+YLExtension.m"; sourceTree = "<group>"; };
-		BB91858A2220420100B484C3 /* UIBarButtonItem+YLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+YLExtension.h"; sourceTree = "<group>"; };
+		BB9185892220420100B484C3 /* UIBarButtonItem+YLInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+YLInit.m"; sourceTree = "<group>"; };
+		BB91858A2220420100B484C3 /* UIBarButtonItem+YLInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+YLInit.h"; sourceTree = "<group>"; };
 		BB91858B2220420100B484C3 /* NSArray+YLSafeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+YLSafeObject.m"; sourceTree = "<group>"; };
-		BB91858C2220420100B484C3 /* UIButton+YLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+YLExtension.h"; sourceTree = "<group>"; };
+		BB91858C2220420100B484C3 /* UIButton+YLInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+YLInit.h"; sourceTree = "<group>"; };
 		BB91858F2220420100B484C3 /* UIImage+YLColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YLColor.h"; sourceTree = "<group>"; };
-		BB9185922220420100B484C3 /* UIButton+YLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YLExtension.m"; sourceTree = "<group>"; };
+		BB9185922220420100B484C3 /* UIButton+YLInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YLInit.m"; sourceTree = "<group>"; };
 		BB9185932220420200B484C3 /* UILabel+YLTextSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+YLTextSize.m"; sourceTree = "<group>"; };
-		BB9185942220420200B484C3 /* UIResponder+YLUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+YLUnit.h"; sourceTree = "<group>"; };
+		BB9185942220420200B484C3 /* UIResponder+YLFirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+YLFirstResponder.h"; sourceTree = "<group>"; };
 		BB9185952220420200B484C3 /* UIImage+YLColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YLColor.m"; sourceTree = "<group>"; };
-		BB91859A2220420200B484C3 /* UITableView+YLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+YLExtension.h"; sourceTree = "<group>"; };
+		BB91859A2220420200B484C3 /* UITableView+YLRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+YLRegister.h"; sourceTree = "<group>"; };
 		BB91859F2220420300B484C3 /* NSArray+YLSafeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+YLSafeObject.h"; sourceTree = "<group>"; };
-		BB9185A12220420300B484C3 /* UITableView+YLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+YLExtension.m"; sourceTree = "<group>"; };
-		BB9185A32220420400B484C3 /* UILabel+YLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+YLExtension.m"; sourceTree = "<group>"; };
+		BB9185A12220420300B484C3 /* UITableView+YLRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+YLRegister.m"; sourceTree = "<group>"; };
+		BB9185A32220420400B484C3 /* UILabel+YLInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+YLInit.m"; sourceTree = "<group>"; };
 		BB9185A52220420400B484C3 /* UILabel+YLTextSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+YLTextSize.h"; sourceTree = "<group>"; };
-		BB9185A72220420400B484C3 /* UIResponder+YLUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+YLUnit.m"; sourceTree = "<group>"; };
-		BB9185A82220420400B484C3 /* UIImageView+YLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+YLExtension.m"; sourceTree = "<group>"; };
-		BB9185AB2220420500B484C3 /* UITextField+YLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+YLExtension.m"; sourceTree = "<group>"; };
+		BB9185A72220420400B484C3 /* UIResponder+YLFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+YLFirstResponder.m"; sourceTree = "<group>"; };
+		BB9185AB2220420500B484C3 /* UITextField+YLCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+YLCheck.m"; sourceTree = "<group>"; };
 		BB9185AC2220420500B484C3 /* UILabel+YLAttributedText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+YLAttributedText.h"; sourceTree = "<group>"; };
 		BB9185DD2220431900B484C3 /* NSObject+YLSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YLSwizzling.h"; sourceTree = "<group>"; };
 		BB9185DE2220431900B484C3 /* NSObject+YLSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YLSwizzling.m"; sourceTree = "<group>"; };
 		BB9185ED2220477E00B484C3 /* NSDate+YLString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+YLString.h"; sourceTree = "<group>"; };
 		BB9185EF2220477E00B484C3 /* NSString+YLFirstLetters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YLFirstLetters.m"; sourceTree = "<group>"; };
 		BB9185F22220477F00B484C3 /* NSObject+YLJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YLJSON.m"; sourceTree = "<group>"; };
-		BB9185F32220477F00B484C3 /* NSAttributedString+YLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+YLExtension.m"; sourceTree = "<group>"; };
-		BB9185F42220477F00B484C3 /* NSAttributedString+YLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+YLExtension.h"; sourceTree = "<group>"; };
+		BB9185F32220477F00B484C3 /* NSAttributedString+YLInit..m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+YLInit..m"; sourceTree = "<group>"; };
+		BB9185F42220477F00B484C3 /* NSAttributedString+YLInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+YLInit.h"; sourceTree = "<group>"; };
 		BB9185F62220477F00B484C3 /* NSString+YLRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YLRegex.h"; sourceTree = "<group>"; };
 		BB9185F72220477F00B484C3 /* NSString+YLEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YLEmoji.m"; sourceTree = "<group>"; };
 		BB9185F92220477F00B484C3 /* NSString+YLCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YLCheck.h"; sourceTree = "<group>"; };
@@ -289,26 +286,24 @@
 			children = (
 				BB91859F2220420300B484C3 /* NSArray+YLSafeObject.h */,
 				BB91858B2220420100B484C3 /* NSArray+YLSafeObject.m */,
-				BB91858A2220420100B484C3 /* UIBarButtonItem+YLExtension.h */,
-				BB9185892220420100B484C3 /* UIBarButtonItem+YLExtension.m */,
-				BB91858C2220420100B484C3 /* UIButton+YLExtension.h */,
-				BB9185922220420100B484C3 /* UIButton+YLExtension.m */,
+				BB91858A2220420100B484C3 /* UIBarButtonItem+YLInit.h */,
+				BB9185892220420100B484C3 /* UIBarButtonItem+YLInit.m */,
+				BB91858C2220420100B484C3 /* UIButton+YLInit.h */,
+				BB9185922220420100B484C3 /* UIButton+YLInit.m */,
 				BB91858F2220420100B484C3 /* UIImage+YLColor.h */,
 				BB9185952220420200B484C3 /* UIImage+YLColor.m */,
-				BB9185812220420000B484C3 /* UIImageView+YLExtension.h */,
-				BB9185A82220420400B484C3 /* UIImageView+YLExtension.m */,
 				BB9185AC2220420500B484C3 /* UILabel+YLAttributedText.h */,
 				BB91857D2220420000B484C3 /* UILabel+YLAttributedText.m */,
-				BB9185862220420000B484C3 /* UILabel+YLExtension.h */,
-				BB9185A32220420400B484C3 /* UILabel+YLExtension.m */,
+				BB9185862220420000B484C3 /* UILabel+YLInit.h */,
+				BB9185A32220420400B484C3 /* UILabel+YLInit.m */,
 				BB9185A52220420400B484C3 /* UILabel+YLTextSize.h */,
 				BB9185932220420200B484C3 /* UILabel+YLTextSize.m */,
-				BB9185942220420200B484C3 /* UIResponder+YLUnit.h */,
-				BB9185A72220420400B484C3 /* UIResponder+YLUnit.m */,
-				BB91859A2220420200B484C3 /* UITableView+YLExtension.h */,
-				BB9185A12220420300B484C3 /* UITableView+YLExtension.m */,
-				BB9185842220420000B484C3 /* UITextField+YLExtension.h */,
-				BB9185AB2220420500B484C3 /* UITextField+YLExtension.m */,
+				BB9185942220420200B484C3 /* UIResponder+YLFirstResponder.h */,
+				BB9185A72220420400B484C3 /* UIResponder+YLFirstResponder.m */,
+				BB91859A2220420200B484C3 /* UITableView+YLRegister.h */,
+				BB9185A12220420300B484C3 /* UITableView+YLRegister.m */,
+				BB9185842220420000B484C3 /* UITextField+YLCheck.h */,
+				BB9185AB2220420500B484C3 /* UITextField+YLCheck.m */,
 				BB91857F2220420000B484C3 /* UIView+YLFrame.h */,
 				BB9185872220420100B484C3 /* UIView+YLFrame.m */,
 				BB9186282220577300B484C3 /* UINavigationController+YLPop.h */,
@@ -320,8 +315,8 @@
 		BB9184B422202E3200B484C3 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				BB9185F42220477F00B484C3 /* NSAttributedString+YLExtension.h */,
-				BB9185F32220477F00B484C3 /* NSAttributedString+YLExtension.m */,
+				BB9185F42220477F00B484C3 /* NSAttributedString+YLInit.h */,
+				BB9185F32220477F00B484C3 /* NSAttributedString+YLInit..m */,
 				BB9185ED2220477E00B484C3 /* NSDate+YLString.h */,
 				BB9186072220478000B484C3 /* NSDate+YLString.m */,
 				BB9186002220477F00B484C3 /* NSObject+YLJSON.h */,
@@ -453,16 +448,16 @@
 				BB91860D2220478000B484C3 /* NSString+YLEmoji.m in Sources */,
 				BB9184D222202E3200B484C3 /* YLPhotoBrowserController.m in Sources */,
 				BB91855022203B8A00B484C3 /* YLSelectButton.m in Sources */,
-				BB9185B52220420500B484C3 /* UIButton+YLExtension.m in Sources */,
+				BB9185B52220420500B484C3 /* UIButton+YLInit.m in Sources */,
 				BB91832822202C7600B484C3 /* main.m in Sources */,
 				BB9186212220531000B484C3 /* NSString+YLSize.m in Sources */,
 				BB9185B32220420500B484C3 /* NSArray+YLSafeObject.m in Sources */,
 				BB9186302220577300B484C3 /* UINavigationController+YLPop.m in Sources */,
 				BB91855122203B8A00B484C3 /* YLHorizontalLayoutButton.m in Sources */,
-				BB9185C42220420500B484C3 /* UITextField+YLExtension.m in Sources */,
+				BB9185C42220420500B484C3 /* UITextField+YLCheck.m in Sources */,
 				BB91860A2220478000B484C3 /* NSObject+YLJSON.m in Sources */,
 				BB9184D322202E3200B484C3 /* YLScoreStarView.m in Sources */,
-				BB9185C02220420500B484C3 /* UIResponder+YLUnit.m in Sources */,
+				BB9185C02220420500B484C3 /* UIResponder+YLFirstResponder.m in Sources */,
 				BB91854F22203B8A00B484C3 /* YLVerticalLayoutButton.m in Sources */,
 				BB9185B62220420500B484C3 /* UILabel+YLTextSize.m in Sources */,
 				BB91832922202C7600B484C3 /* AppDelegate.m in Sources */,
@@ -471,16 +466,15 @@
 				BB9184E722202E3200B484C3 /* JRSwizzle.m in Sources */,
 				BB9185AD2220420500B484C3 /* UILabel+YLAttributedText.m in Sources */,
 				BB9184CA22202E3200B484C3 /* YLAddressBookManager.m in Sources */,
-				BB9185BE2220420500B484C3 /* UILabel+YLExtension.m in Sources */,
+				BB9185BE2220420500B484C3 /* UILabel+YLInit.m in Sources */,
 				BB91854822203B1B00B484C3 /* YLSelectImageView.m in Sources */,
-				BB9185C12220420500B484C3 /* UIImageView+YLExtension.m in Sources */,
 				BB91862E2220577300B484C3 /* YLImagePickerManager.m in Sources */,
 				BB9185DF2220431900B484C3 /* NSObject+YLSwizzling.m in Sources */,
-				BB9185B22220420500B484C3 /* UIBarButtonItem+YLExtension.m in Sources */,
-				BB91860B2220478000B484C3 /* NSAttributedString+YLExtension.m in Sources */,
+				BB9185B22220420500B484C3 /* UIBarButtonItem+YLInit.m in Sources */,
+				BB91860B2220478000B484C3 /* NSAttributedString+YLInit..m in Sources */,
 				BB9186122220478000B484C3 /* NSString+YLCheck.m in Sources */,
 				BB9185B12220420500B484C3 /* UIView+YLFrame.m in Sources */,
-				BB9185BC2220420500B484C3 /* UITableView+YLExtension.m in Sources */,
+				BB9185BC2220420500B484C3 /* UITableView+YLRegister.m in Sources */,
 				BB9184D422202E3200B484C3 /* YLTriangleView.m in Sources */,
 				BB91832522202C7600B484C3 /* ViewController.m in Sources */,
 				BB9186082220478000B484C3 /* NSString+YLFirstLetters.m in Sources */,

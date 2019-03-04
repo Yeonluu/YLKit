@@ -1,14 +1,14 @@
 //
-//  NSAttributedString+YLExtension.m
+//  NSAttributedString+YLInit.m
 //  YLKit
 //
 //  Created by Yeonluu on 16/1/5.
 //  Copyright © 2016年 Yeonluu. All rights reserved.
 //
 
-#import "NSAttributedString+YLExtension.h"
+#import "NSAttributedString+YLInit.h"
 
-@implementation NSAttributedString (YLExtension)
+@implementation NSAttributedString (YLInit)
 
 
 + (instancetype)stringWithString:(NSString *)string font:(UIFont *)font color:(UIColor *)color range:(NSRange)range

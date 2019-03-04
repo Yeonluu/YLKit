@@ -1,5 +1,5 @@
 //
-//  SDJTextField.m
+//  YLTextField.m
 //  YLKit
 //
 //  Created by Yeonluu on 2016/11/22.
@@ -7,7 +7,7 @@
 //
 
 #import "YLTextField.h"
-#import "UITextField+YLExtension.h"
+#import "UITextField+YLCheck.h"
 
 @interface YLTextField () <UITextFieldDelegate>
 // 控制输入长度时，单纯用textFieldEditingChanged会导致中文输入时被截断，单纯用shouldChangeCharactersInRange又有些情况下不走这个方法
@@ -30,7 +30,7 @@
     return self;
 }
 
-- (instancetype)initWithType:(SDJTextType)type fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor placeholder:(NSString *)placeholder title:(NSString *)title
+- (instancetype)initWithType:(YLTextType)type fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor placeholder:(NSString *)placeholder title:(NSString *)title
 {
     if (self = [self init]) {
         self.textColor = textColor;
@@ -39,7 +39,7 @@
         self.placeholder = placeholder;
         self.title = [title deleteSpace];
         self.textType = type;
-        if (type == SDJTextTypeNone) {
+        if (type == YLTextTypeNone) {
             self.enabled = NO;
         }
     }
@@ -47,7 +47,7 @@
 }
 
 
-+ (instancetype)textFieldWithType:(SDJTextType)type fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor placeholder:(NSString *)placeholder title:(NSString *)title
++ (instancetype)textFieldWithType:(YLTextType)type fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor placeholder:(NSString *)placeholder title:(NSString *)title
 {
     return [[self alloc] initWithType:type fontSize:fontSize textColor:textColor placeholder:placeholder title:title];
 }
@@ -57,31 +57,31 @@
     self.delegate = self;
 }
 
-- (void)setTextType:(SDJTextType)textType
+- (void)setTextType:(YLTextType)textType
 {
     _textType = textType;
-    if (textType == SDJTextTypeNone) {
+    if (textType == YLTextTypeNone) {
         return;
     }
     
-    if (textType == SDJTextTypeName) { // 姓名
+    if (textType == YLTextTypeName) { // 姓名
         self.keyboardType = UIKeyboardTypeDefault;
         self.autocorrectionType = UITextAutocorrectionTypeDefault;
     }
-    else if (textType == SDJTextTypeNumber || textType == SDJTextTypeMobile) { // 数字
+    else if (textType == YLTextTypeNumber || textType == YLTextTypeMobile) { // 数字
         self.keyboardType = UIKeyboardTypeNumberPad;
         self.autocorrectionType = UITextAutocorrectionTypeNo;
         self.maxTextLength = MaxPhoneLength;
     }
-    else if (textType == SDJTextTypeLettersNumber) { // 字母和数字
+    else if (textType == YLTextTypeLettersNumber) { // 字母和数字
         self.keyboardType = UIKeyboardTypeASCIICapable;
         self.autocorrectionType = UITextAutocorrectionTypeNo;
     }
-    else if (textType == SDJTextTypePrice) { // 金额
+    else if (textType == YLTextTypePrice) { // 金额
         self.keyboardType = UIKeyboardTypeDecimalPad;
         self.autocorrectionType = UITextAutocorrectionTypeNo;
     }
-    else if (textType == SDJTextTypeASCII) {
+    else if (textType == YLTextTypeASCII) {
         self.keyboardType = UIKeyboardTypeASCIICapable;
         self.autocorrectionType = UITextAutocorrectionTypeNo;
     }
@@ -101,7 +101,7 @@
     
     NSString *replacedString = [textField.text stringByReplacingCharactersInRange:range withString:string];
     
-    if (self.textType == SDJTextTypePrice) { // 金额
+    if (self.textType == YLTextTypePrice) { // 金额
         unichar single = [string characterAtIndex:0];
         if ((single < '0' || single > '9' ) && single != '.') {
             return NO;
@@ -111,17 +111,17 @@
     else if (replacedString.length > self.maxTextLength) {
         return NO;
     }
-    else if (self.textType == SDJTextTypeMobile || self.textType == SDJTextTypeNumber) { // 数字
+    else if (self.textType == YLTextTypeMobile || self.textType == YLTextTypeNumber) { // 数字
         unichar single = [string characterAtIndex:0];
         if (single < '0' || single > '9') {
             return NO;
         }
     }
-    else if (self.textType == SDJTextTypeLettersNumber && ![string isLettersNumber]) { // 字母数字
+    else if (self.textType == YLTextTypeLettersNumber && ![string isLettersNumber]) { // 字母数字
         return NO;
     }
     else { // 其他
-        if (self.textType == SDJTextTypeASCII) {
+        if (self.textType == YLTextTypeASCII) {
             if ([string containsChinese] || [string isEqualToString:@" "]) {
                 return NO;
             }
@@ -141,21 +141,21 @@
 
 - (void)textFieldEditingChanged:(UITextField *)textField
 {
-    if (self.textType == SDJTextTypeMobile) { // 手机
+    if (self.textType == YLTextTypeMobile) { // 手机
         [textField formatMobile];
     }
-    else if (self.textType == SDJTextTypePrice) { // 金额
+    else if (self.textType == YLTextTypePrice) { // 金额
         if (textField.text.doubleValue > self.maxValue) {
             textField.text = [NSString stringWithFormat:@"%.2f", self.maxValue];
         }
     }
-    else if (self.textType == SDJTextTypeNumber) { // 数额
+    else if (self.textType == YLTextTypeNumber) { // 数额
         if (self.maxValue >= 0 && textField.text.doubleValue > self.maxValue) {
             textField.text = [NSString stringWithFormat:@"%.0f", self.maxValue];
         }
     }
     else { // 其他
-        if (self.textType == SDJTextTypeASCII) {
+        if (self.textType == YLTextTypeASCII) {
             [textField checkChineseAndSpace];
         }
         else {
@@ -185,7 +185,7 @@
         return NO;
     }
     // 校验手机号格式
-    if (self.textType == SDJTextTypeMobile) {
+    if (self.textType == YLTextTypeMobile) {
         if ([self.text deleteSpace].isErrorMobile) {
             return NO;
         }
@@ -196,7 +196,7 @@
 - (void)setEnabled:(BOOL)enabled
 {
     [super setEnabled:enabled];
-    if (!enabled && self.textType != SDJTextTypeNone) {
+    if (!enabled && self.textType != YLTextTypeNone) {
         self.textColor = _disabledColor;
     }
     else {

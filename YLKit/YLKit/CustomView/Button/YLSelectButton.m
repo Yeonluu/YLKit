@@ -7,7 +7,7 @@
 //
 
 #import "YLSelectButton.h"
-#import "UIButton+YLExtension.H"
+#import "UIButton+YLInit.H"
 
 @implementation YLSelectButton
 

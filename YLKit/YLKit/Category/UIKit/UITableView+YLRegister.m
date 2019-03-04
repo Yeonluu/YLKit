@@ -1,14 +1,14 @@
 //
-//  UITableView+YLExtension.m
+//  UITableView+YLRegister.m
 //  YLKit
 //
 //  Created by Yeonluu on 2017/5/26.
 //  Copyright © 2017年 Yeonluu. All rights reserved.
 //
 
-#import "UITableView+YLExtension.h"
+#import "UITableView+YLRegister.h"
 
-@implementation UITableView (YLExtension)
+@implementation UITableView (YLRegister)
 
 - (instancetype)initWithDelegate:(id <UITableViewDelegate>)delegate dataSource:(id <UITableViewDataSource>)dataSource
 {
@@ -82,7 +82,7 @@
 @end
 
 
-@implementation UICollectionView (YLExtension)
+@implementation UICollectionView (YLInit)
 
 - (instancetype)initWithLayout:(UICollectionViewLayout *)layout delegate:(id<UICollectionViewDelegate>)delegate dataSource:(id<UICollectionViewDataSource>)dataSource
 {

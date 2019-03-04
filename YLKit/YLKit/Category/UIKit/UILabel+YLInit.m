@@ -1,14 +1,14 @@
 //
-//  UILabel+YLExtension.m
+//  UILabel+YLInit.m
 //  YLKit
 //
 //  Created by Yeonluu on 15/8/17.
 //  Copyright © 2015年 Yeonluu All rights reserved.
 //
 
-#import "UILabel+YLExtension.h"
+#import "UILabel+YLInit.h"
 
-@implementation UILabel (YLExtension)
+@implementation UILabel (YLInit)
 
 - (instancetype)initWithFont:(UIFont *)font textColor:(UIColor *)color text:(NSString *)text
 {

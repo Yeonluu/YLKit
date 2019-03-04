@@ -1,13 +1,13 @@
 //
-//  UIButton+YLExtension.m
+//  UIButton+YLInit.m
 //
 //  Created by Yeonluu on 15/1/21.
 //  Copyright © 2015年 Yeonluu. All rights reserved.
 //
 
-#import "UIButton+YLExtension.h"
+#import "UIButton+YLInit.h"
 
-@implementation UIButton (YLExtension)
+@implementation UIButton (YLInit)
 
 + (instancetype)buttonWithTarget:(id)target action:(SEL)action title:(NSString *)title
 {

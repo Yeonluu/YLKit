@@ -1,15 +1,15 @@
 //
-//  UIBarButtonItem+YLExtension.m
+//  UIBarButtonItem+YLInit.m
 //  YLKit
 //
 //  Created by Yeonluu on 2017/10/10.
 //  Copyright © 2017年 Yeonluu. All rights reserved.
 //
 
-#import "UIBarButtonItem+YLExtension.h"
+#import "UIBarButtonItem+YLInit.h"
 #import "YLConstants.h"
 
-@implementation UIBarButtonItem (YLExtension)
+@implementation UIBarButtonItem (YLInit)
 
 + (instancetype)leftItemWithImageNamed:(NSString *)named target:(id)target action:(SEL)action
 {

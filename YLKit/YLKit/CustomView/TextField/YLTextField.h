@@ -1,5 +1,5 @@
 //
-//  SDJTextField.h
+//  YLTextField.h
 //  YLKit
 //
 //  Created by Yeonluu on 2016/11/22.
@@ -11,21 +11,21 @@
 /**
  输入类型
  */
-typedef NS_ENUM(NSInteger, SDJTextType) {
-    SDJTextTypeDefault,       // 默认
-    SDJTextTypeName,          // 姓名
-    SDJTextTypeMobile,        // 手机
-    SDJTextTypeNumber,        // 数字
-    SDJTextTypePrice,         // 金额
-    SDJTextTypeLettersNumber, // 字母数字
-    SDJTextTypeASCII,         // 字母数字符号不包括空格和中文
-    SDJTextTypeNone,          // 不需要输入
+typedef NS_ENUM(NSInteger, YLTextType) {
+    YLTextTypeDefault,       // 默认
+    YLTextTypeName,          // 姓名
+    YLTextTypeMobile,        // 手机
+    YLTextTypeNumber,        // 数字
+    YLTextTypePrice,         // 金额
+    YLTextTypeLettersNumber, // 字母数字
+    YLTextTypeASCII,         // 字母数字符号不包括空格和中文
+    YLTextTypeNone,          // 不需要输入
 };
 
 @interface YLTextField : UITextField
 
 /**
- SDJTextField 构造方法
+ YLTextField 构造方法
  
  @param type        输入类型
  @param fontSize    字体大小
@@ -33,15 +33,15 @@ typedef NS_ENUM(NSInteger, SDJTextType) {
  @param placeholder 占位文字
  @param title       类型标题 调用isValidText会提示请输入"title"
  */
-+ (instancetype)textFieldWithType:(SDJTextType)type fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor placeholder:(NSString *)placeholder title:(NSString *)title;
++ (instancetype)textFieldWithType:(YLTextType)type fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor placeholder:(NSString *)placeholder title:(NSString *)title;
 
 /**
  *  输入类型
  */
-@property (nonatomic, assign) SDJTextType textType;
+@property (nonatomic, assign) YLTextType textType;
 
 /**
- *  最大可输入长度 默认为20 SDJTextTypePrice时失效
+ *  最大可输入长度 默认为20 YLTextTypePrice时失效
  */
 @property (nonatomic, assign) NSInteger maxTextLength;
 

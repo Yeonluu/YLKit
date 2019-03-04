@@ -1,5 +1,5 @@
 //
-//  UITextField+YLExtension.h
+//  UITextField+YLCheck.h
 //  YLKit
 //
 //  Created by Yeonluu on 15/12/10.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "NSString+YLCheck.h"
 
-@interface UITextField (YLExtension)
+@interface UITextField (YLCheck)
 
 /**
  快速构造方法

@@ -1,5 +1,5 @@
 //
-//  DatePickerView.swift
+//  YLDatePickerView.swift
 //  YLKitSwift
 //
 //  Created by Yeonluu on 2018/8/27.
@@ -178,7 +178,7 @@ class YLDatePickerView: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
 }
 
 
-extension DatePickerView {
+extension YLDatePickerView {
     
     // MARK: PickerView delegate & dataSource
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -290,7 +290,7 @@ extension DatePickerView {
     }
 }
 
-extension DatePickerView {
+extension YLDatePickerView {
     
     // MARK: Helper
     

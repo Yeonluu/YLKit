@@ -36,24 +36,3 @@ extension Dictionary {
     }
 }
 
-extension Array {
-
-    
-//    public func toJSONString() -> String {
-//        
-//        if JSONSerialization.isValidJSONObject(self) {
-//            do {
-//                let jsonData: Data = try JSONSerialization.data(withJSONObject: self, options: [])
-//                return String(data: jsonData, encoding: .utf8) ?? ""
-//            } catch _ {
-//                print(error)
-//            }
-//        }
-//        else {
-//            print(error)
-//        }
-//        return ""
-//    }
-    
-    
-}
