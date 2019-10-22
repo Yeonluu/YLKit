@@ -1,14 +1,16 @@
 //
-//  YLAlertManager.h
+//  UIAlertController+YLInit.h
 //  YLKit
 //
-//  Created by Yeonluu on 2016/11/1.
-//  Copyright © 2016年 Yeonluu. All rights reserved.
+//  Created by Yeonluu on 2019/5/27.
+//  Copyright © 2019 Yeonluu. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 typedef void (^VoidBlock)(void);
-@interface YLAlertManager : NSObject
+NS_ASSUME_NONNULL_BEGIN
+
+@interface UIAlertController (YLInit)
 
 /**
  显示有"确定"和"取消"按钮的完整Alert
@@ -19,7 +21,7 @@ typedef void (^VoidBlock)(void);
  @param cancelTitle    取消按钮标题
  @param cancelBlock    取消事件回调
  */
-+ (void)showMessage:(NSString *)message submitTitle:(NSString *)submitTitle submitBlock:(VoidBlock)submitBlock cancelTitle:(NSString *)cancelTitle cancelBlock:(VoidBlock)cancelBlock;
++ (void)showMessage:(NSString *)message submitTitle:(nullable NSString *)submitTitle submitBlock:(nullable VoidBlock)submitBlock cancelTitle:(nullable NSString *)cancelTitle cancelBlock:(nullable VoidBlock)cancelBlock;
 
 
 /**
@@ -29,7 +31,7 @@ typedef void (^VoidBlock)(void);
  @param submitTitle    确定按钮标题
  @param submitBlock    确定事件回调
  */
-+ (void)showMessage:(NSString *)message submitTitle:(NSString *)submitTitle submitBlock:(VoidBlock)submitBlock;
++ (void)showMessage:(NSString *)message submitTitle:(NSString *)submitTitle submitBlock:(nullable VoidBlock)submitBlock;
 
 
 /**
@@ -39,7 +41,7 @@ typedef void (^VoidBlock)(void);
  @param cancelTitle    取消按钮标题
  @param cancelBlock    取消事件回调
  */
-+ (void)showMessage:(NSString *)message cancelTitle:(NSString *)cancelTitle cancelBlock:(VoidBlock)cancelBlock;
++ (void)showMessage:(NSString *)message cancelTitle:(NSString *)cancelTitle cancelBlock:(nullable VoidBlock)cancelBlock;
 
 
 /**
@@ -50,18 +52,8 @@ typedef void (^VoidBlock)(void);
  @param submitTitle          取消按钮标题
  @param submitBlock          取消事件回调
  */
-+ (void)showTextFieldWithConfigurationHandler:(void(^)(UITextField *textField))configurationHandler title:(NSString *)title submitTitle:(NSString *)submitTitle submitBlock:(void(^)(NSString *text))submitBlock;
-
-
-/**
- 释放正在显示的Alert
- */
-+ (void)dismissAlert;
-
-
-/**
- 是否正在显示Alert
- */
-+ (BOOL)isShowAlert;
++ (void)showTextFieldWithConfigurationHandler:(void(^)(UITextField *textField))configurationHandler title:(NSString *)title submitTitle:(NSString *)submitTitle submitBlock:(nullable void(^)(NSString *text))submitBlock;
 
 @end
+
+NS_ASSUME_NONNULL_END

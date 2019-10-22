@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB3DF73322A8BBAE00A42A68 /* UICollectionView+YLRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3DF73222A8BBAE00A42A68 /* UICollectionView+YLRegister.m */; };
+		BB3DF73622A8BC0600A42A68 /* UIView+YLBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3DF73522A8BC0600A42A68 /* UIView+YLBorder.m */; };
+		BB3DF73922A8C30400A42A68 /* NSString+YLRounding.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3DF73822A8C30400A42A68 /* NSString+YLRounding.m */; };
+		BB3DF73C22A8C30D00A42A68 /* UIAlertController+YLInit.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3DF73B22A8C30D00A42A68 /* UIAlertController+YLInit.m */; };
 		BB8ECE6D2221739500B06162 /* YLTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8ECE6C2221739500B06162 /* YLTextField.m */; };
 		BB91832422202C7600B484C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB91831A22202C7600B484C3 /* Assets.xcassets */; };
 		BB91832522202C7600B484C3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB91831B22202C7600B484C3 /* ViewController.m */; };
@@ -44,12 +48,19 @@
 		BB9186122220478000B484C3 /* NSString+YLCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9186032220477F00B484C3 /* NSString+YLCheck.m */; };
 		BB9186152220478000B484C3 /* NSDate+YLString.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9186072220478000B484C3 /* NSDate+YLString.m */; };
 		BB9186212220531000B484C3 /* NSString+YLSize.m in Sources */ = {isa = PBXBuildFile; fileRef = BB91861F2220531000B484C3 /* NSString+YLSize.m */; };
-		BB91862D2220577300B484C3 /* YLAlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9186252220577200B484C3 /* YLAlertManager.m */; };
 		BB91862E2220577300B484C3 /* YLImagePickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9186272220577300B484C3 /* YLImagePickerManager.m */; };
 		BB9186302220577300B484C3 /* UINavigationController+YLPop.m in Sources */ = {isa = PBXBuildFile; fileRef = BB91862C2220577300B484C3 /* UINavigationController+YLPop.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB3DF73122A8BBAE00A42A68 /* UICollectionView+YLRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+YLRegister.h"; sourceTree = "<group>"; };
+		BB3DF73222A8BBAE00A42A68 /* UICollectionView+YLRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+YLRegister.m"; sourceTree = "<group>"; };
+		BB3DF73422A8BC0500A42A68 /* UIView+YLBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YLBorder.h"; sourceTree = "<group>"; };
+		BB3DF73522A8BC0600A42A68 /* UIView+YLBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YLBorder.m"; sourceTree = "<group>"; };
+		BB3DF73722A8C30400A42A68 /* NSString+YLRounding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YLRounding.h"; sourceTree = "<group>"; };
+		BB3DF73822A8C30400A42A68 /* NSString+YLRounding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YLRounding.m"; sourceTree = "<group>"; };
+		BB3DF73A22A8C30D00A42A68 /* UIAlertController+YLInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+YLInit.h"; sourceTree = "<group>"; };
+		BB3DF73B22A8C30D00A42A68 /* UIAlertController+YLInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+YLInit.m"; sourceTree = "<group>"; };
 		BB8ECE6B2221739500B06162 /* YLTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTextField.h; sourceTree = "<group>"; };
 		BB8ECE6C2221739500B06162 /* YLTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTextField.m; sourceTree = "<group>"; };
 		BB9182BD22202A1600B484C3 /* YLKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,10 +136,8 @@
 		BB91861F2220531000B484C3 /* NSString+YLSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YLSize.m"; sourceTree = "<group>"; };
 		BB9186202220531000B484C3 /* NSString+YLSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YLSize.h"; sourceTree = "<group>"; };
 		BB9186232220567900B484C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		BB9186252220577200B484C3 /* YLAlertManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLAlertManager.m; sourceTree = "<group>"; };
 		BB9186272220577300B484C3 /* YLImagePickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLImagePickerManager.m; sourceTree = "<group>"; };
 		BB9186282220577300B484C3 /* UINavigationController+YLPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+YLPop.h"; sourceTree = "<group>"; };
-		BB91862A2220577300B484C3 /* YLAlertManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLAlertManager.h; sourceTree = "<group>"; };
 		BB91862B2220577300B484C3 /* YLImagePickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLImagePickerManager.h; sourceTree = "<group>"; };
 		BB91862C2220577300B484C3 /* UINavigationController+YLPop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+YLPop.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -205,8 +214,6 @@
 			children = (
 				BB91862B2220577300B484C3 /* YLImagePickerManager.h */,
 				BB9186272220577300B484C3 /* YLImagePickerManager.m */,
-				BB91862A2220577300B484C3 /* YLAlertManager.h */,
-				BB9186252220577200B484C3 /* YLAlertManager.m */,
 				BB91848322202E3200B484C3 /* YLAddressBookManager.h */,
 				BB91848022202E3200B484C3 /* YLAddressBookManager.m */,
 			);
@@ -302,12 +309,18 @@
 				BB9185A72220420400B484C3 /* UIResponder+YLFirstResponder.m */,
 				BB91859A2220420200B484C3 /* UITableView+YLRegister.h */,
 				BB9185A12220420300B484C3 /* UITableView+YLRegister.m */,
+				BB3DF73122A8BBAE00A42A68 /* UICollectionView+YLRegister.h */,
+				BB3DF73222A8BBAE00A42A68 /* UICollectionView+YLRegister.m */,
 				BB9185842220420000B484C3 /* UITextField+YLCheck.h */,
 				BB9185AB2220420500B484C3 /* UITextField+YLCheck.m */,
+				BB3DF73522A8BC0600A42A68 /* UIView+YLBorder.m */,
+				BB3DF73422A8BC0500A42A68 /* UIView+YLBorder.h */,
 				BB91857F2220420000B484C3 /* UIView+YLFrame.h */,
 				BB9185872220420100B484C3 /* UIView+YLFrame.m */,
 				BB9186282220577300B484C3 /* UINavigationController+YLPop.h */,
 				BB91862C2220577300B484C3 /* UINavigationController+YLPop.m */,
+				BB3DF73A22A8C30D00A42A68 /* UIAlertController+YLInit.h */,
+				BB3DF73B22A8C30D00A42A68 /* UIAlertController+YLInit.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -331,6 +344,8 @@
 				BB9185F72220477F00B484C3 /* NSString+YLEmoji.m */,
 				BB9185F62220477F00B484C3 /* NSString+YLRegex.h */,
 				BB9185FC2220477F00B484C3 /* NSString+YLRegex.m */,
+				BB3DF73722A8C30400A42A68 /* NSString+YLRounding.h */,
+				BB3DF73822A8C30400A42A68 /* NSString+YLRounding.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -441,7 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB91862D2220577300B484C3 /* YLAlertManager.m in Sources */,
+				BB3DF73C22A8C30D00A42A68 /* UIAlertController+YLInit.m in Sources */,
 				BB9186152220478000B484C3 /* NSDate+YLString.m in Sources */,
 				BB9185B72220420500B484C3 /* UIImage+YLColor.m in Sources */,
 				BB9184D122202E3200B484C3 /* YLPhotoView.m in Sources */,
@@ -453,6 +468,7 @@
 				BB9186212220531000B484C3 /* NSString+YLSize.m in Sources */,
 				BB9185B32220420500B484C3 /* NSArray+YLSafeObject.m in Sources */,
 				BB9186302220577300B484C3 /* UINavigationController+YLPop.m in Sources */,
+				BB3DF73622A8BC0600A42A68 /* UIView+YLBorder.m in Sources */,
 				BB91855122203B8A00B484C3 /* YLHorizontalLayoutButton.m in Sources */,
 				BB9185C42220420500B484C3 /* UITextField+YLCheck.m in Sources */,
 				BB91860A2220478000B484C3 /* NSObject+YLJSON.m in Sources */,
@@ -463,6 +479,7 @@
 				BB91832922202C7600B484C3 /* AppDelegate.m in Sources */,
 				BB9186102220478000B484C3 /* NSString+YLRegex.m in Sources */,
 				BB8ECE6D2221739500B06162 /* YLTextField.m in Sources */,
+				BB3DF73922A8C30400A42A68 /* NSString+YLRounding.m in Sources */,
 				BB9184E722202E3200B484C3 /* JRSwizzle.m in Sources */,
 				BB9185AD2220420500B484C3 /* UILabel+YLAttributedText.m in Sources */,
 				BB9184CA22202E3200B484C3 /* YLAddressBookManager.m in Sources */,
@@ -473,6 +490,7 @@
 				BB9185B22220420500B484C3 /* UIBarButtonItem+YLInit.m in Sources */,
 				BB91860B2220478000B484C3 /* NSAttributedString+YLInit..m in Sources */,
 				BB9186122220478000B484C3 /* NSString+YLCheck.m in Sources */,
+				BB3DF73322A8BBAE00A42A68 /* UICollectionView+YLRegister.m in Sources */,
 				BB9185B12220420500B484C3 /* UIView+YLFrame.m in Sources */,
 				BB9185BC2220420500B484C3 /* UITableView+YLRegister.m in Sources */,
 				BB9184D422202E3200B484C3 /* YLTriangleView.m in Sources */,

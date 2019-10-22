@@ -11,7 +11,7 @@
 @implementation NSArray (YLSafeObject)
 
 
-- (id)safeObejctAtIndex:(NSUInteger)index
+- (id)safe_objectAtIndex:(NSUInteger)index
 {
     if (index >= self.count) {
         return nil;
@@ -20,15 +20,15 @@
 }
 
 
-- (NSInteger)integerAtIndex:(NSUInteger)index
+- (NSInteger)safe_integerAtIndex:(NSUInteger)index
 {
-    return [[self safeObejctAtIndex:index] integerValue];
+    return [[self safe_objectAtIndex:index] integerValue];
 }
 
 
-- (CGFloat)floatAtIndex:(NSUInteger)index
+- (CGFloat)safe_floatAtIndex:(NSUInteger)index
 {
-    return [[self safeObejctAtIndex:index] doubleValue];
+    return [[self safe_objectAtIndex:index] doubleValue];
 }
 
 
@@ -38,14 +38,14 @@
 @implementation NSMutableArray (SafeObject)
 
 
-- (void)safeAddObejct:(id)anObejct
+- (void)safe_addObject:(id)anObject
 {
-    if (anObejct) {
-        [self addObject:anObejct];
+    if (anObject) {
+        [self addObject:anObject];
     }
 }
 
-- (void)safeInsertObject:(id)anObject atIndex:(NSUInteger)index
+- (void)safe_insertObject:(id)anObject atIndex:(NSUInteger)index
 {
     if (anObject && index <= self.count) {
         [self insertObject:anObject atIndex:index];

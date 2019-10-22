@@ -1,16 +1,23 @@
 //
-//  YLAlertManager.m
+//  UIAlertController+YLInit.m
 //  YLKit
 //
-//  Created by Yeonluu on 2016/11/1.
-//  Copyright © 2016年 Yeonluu. All rights reserved.
+//  Created by Yeonluu on 2019/5/27.
+//  Copyright © 2019 Yeonluu. All rights reserved.
 //
 
-#import "YLAlertManager.h"
+#import "UIAlertController+YLInit.h"
 #import "YLSingleton.h"
 
-@implementation UIAlertController (show)
+@interface YLAlertManager : NSObject
+@property (nonatomic, strong) UIAlertController *visibleAlertController;
+@end
 
+@implementation YLAlertManager
+SingletonM(Manager);
+@end
+
+@implementation UIAlertController (Init)
 - (void)show
 {
     UIWindow *win = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -21,29 +28,24 @@
     [win makeKeyAndVisible];
     [vc presentViewController:self animated:YES completion:nil];
 }
-@end
 
-@interface YLAlertManager ()
-@property (nonatomic, strong) UIAlertController *alertController;
-@end
+- (void)dismiss {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
-@implementation YLAlertManager
-
-SingletonM(Manager);
-
-+ (void)showMessage:(NSString *)message submitTitle:(NSString *)submitTitle submitBlock:(VoidBlock)submitBlock cancelTitle:(NSString *)cancelTitle cancelBlock:(VoidBlock)cancelBlock
-{
-    [YLAlertManager dismissAlert];
++ (void)showMessage:(NSString *)message submitTitle:(nullable NSString *)submitTitle submitBlock:(nullable VoidBlock)submitBlock cancelTitle:(nullable NSString *)cancelTitle cancelBlock:(nullable VoidBlock)cancelBlock {
+    
+    [self dismissVisibleAlertController];
     
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleAlert];
-    [YLAlertManager sharedManager].alertController = alertController;
+    [YLAlertManager sharedManager].visibleAlertController = alertController;
     
     // 取消按钮一定有
     [alertController addAction:[UIAlertAction actionWithTitle:cancelTitle style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
         if (cancelBlock) {
             cancelBlock();
         }
-        [YLAlertManager sharedManager].alertController = nil;
+        [YLAlertManager sharedManager].visibleAlertController = nil;
     }]];
     
     if (submitTitle.length) {
@@ -51,12 +53,11 @@ SingletonM(Manager);
             if (submitBlock) {
                 submitBlock();
             }
-            [YLAlertManager sharedManager].alertController = nil;
+            [YLAlertManager sharedManager].visibleAlertController = nil;
         }]];
     }
     [alertController show];
 }
-
 
 + (void)showMessage:(NSString *)message submitTitle:(NSString *)submitTitle submitBlock:(VoidBlock)submitBlock
 {
@@ -71,7 +72,7 @@ SingletonM(Manager);
 + (void)showTextFieldWithConfigurationHandler:(void(^)(UITextField *textField))configurationHandler title:(NSString *)title submitTitle:(NSString *)submitTitle submitBlock:(void(^)(NSString *text))submitBlock
 {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:nil preferredStyle:UIAlertControllerStyleAlert];
-    [YLAlertManager sharedManager].alertController = alertController;
+    [YLAlertManager sharedManager].visibleAlertController = alertController;
     
     [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
         if (configurationHandler) {
@@ -80,12 +81,12 @@ SingletonM(Manager);
     }];
     
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-        [YLAlertManager sharedManager].alertController = nil;
+        [YLAlertManager sharedManager].visibleAlertController = nil;
     }];
     [alertController addAction:cancelAction];
     
     UIAlertAction *submitAction = [UIAlertAction actionWithTitle:submitTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [YLAlertManager sharedManager].alertController = nil;
+        [YLAlertManager sharedManager].visibleAlertController = nil;
         if (submitBlock) {
             submitBlock([alertController.textFields[0] text]);
         }
@@ -94,19 +95,10 @@ SingletonM(Manager);
     [alertController show];
 }
 
-
-+ (void)dismissAlert
++ (void)dismissVisibleAlertController
 {
-    if ([YLAlertManager sharedManager].alertController) {
-        [[YLAlertManager sharedManager].alertController dismissViewControllerAnimated:YES completion:nil];
-        [YLAlertManager sharedManager].alertController = nil;
-    }
-}
-
-+ (BOOL)isShowAlert
-{
-    return [YLAlertManager sharedManager].alertController != nil;
+    [[YLAlertManager sharedManager].visibleAlertController dismiss];
+    [YLAlertManager sharedManager].visibleAlertController = nil;
 }
 
 @end
-

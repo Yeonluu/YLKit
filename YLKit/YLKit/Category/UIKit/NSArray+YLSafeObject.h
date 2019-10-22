@@ -13,17 +13,17 @@
 /**
  *  避免数组越界导致奔溃
  */
-- (id)safeObejctAtIndex:(NSUInteger)index;
+- (id)safe_objectAtIndex:(NSUInteger)index;
 
 /**
  *  获取NSInteger值
  */
-- (NSInteger)integerAtIndex:(NSUInteger)index;
+- (NSInteger)safe_integerAtIndex:(NSUInteger)index;
 
 /**
  *  获取CGFloat值
  */
-- (CGFloat)floatAtIndex:(NSUInteger)index;
+- (CGFloat)safe_floatAtIndex:(NSUInteger)index;
 
 @end
 
@@ -32,11 +32,11 @@
 /**
  *  避免添加nil导致奔溃
  */
-- (void)safeAddObejct:(id)anObejct;
+- (void)safe_addObject:(id)anObject;
 
 /**
  *  避免插入nil导致奔溃
  */
-- (void)safeInsertObject:(id)anObject atIndex:(NSUInteger)index;
+- (void)safe_insertObject:(id)anObject atIndex:(NSUInteger)index;
 
 @end
